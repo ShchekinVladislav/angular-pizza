@@ -9,6 +9,8 @@ import { FiltersComponent } from './components/filters/filters.component';
 import { ListComponent } from './components/list/list.component';
 import { BasketComponent } from './page/basket/basket.component';
 import { ListBasketComponent } from './components/list-basket/list-basket.component';
+import { CustomFilterSelectComponent } from './components/custom-filter-select/custom-filter-select.component';
+import { ModalFilterSelectComponent } from './components/custom-filter-select/modal-filter-select/modal-filter-select.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ListBasketComponent } from './components/list-basket/list-basket.compon
     FiltersComponent,
     ListComponent,
     BasketComponent,
-    ListBasketComponent
+    ListBasketComponent,
+    CustomFilterSelectComponent,
+    ModalFilterSelectComponent
   ],
   imports: [
     BrowserModule,

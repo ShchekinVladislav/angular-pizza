@@ -98,6 +98,7 @@
 .filter{
   display: flex;
   padding: 20px 35px;
+  align-items: center;
   &-list{
     width: 80%;
     display: flex;
@@ -109,10 +110,13 @@
       font-size: 16px;
       line-height: 19px;
       font-family: @font-bold;
-      &-active{
-        background-color: #282828;
-        color: #FFFFFF;
-      }
+      cursor: pointer;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
   }
   &-list > div {
@@ -124,19 +128,25 @@
     align-items: center;
     font-family: @font-bold;
     font-size: 14px;
-    img{
+    svg{
       padding-right: 7px;
+      padding-left: 7px;
     }
     span{
+      cursor: pointer;
       font-family: @font-light;
       margin-left: 7px;
       color: @orange-color;
       border-bottom: 1px dashed @orange-color;
+      -ms-user-select: none;
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
     }
     &__modal{
       position: absolute;
-      margin-top: 180px;
-      margin-left: 100px;
+      margin-top: 30px;
+      margin-left: -90px;
       background: #FFFFFF;
       box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
       border-radius: 10px;
@@ -146,14 +156,28 @@
         padding: 10px 18px;
         font-size: 14px;
         font-family: @font-normal;
-        &-active{
-          padding: 10px 18px;
-          color: @orange-color;
-          background: rgba(254, 95, 30, 0.05);
-        }
+        cursor: pointer;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
       }
     }
   }
+}
+.filter-list > .active {
+    background-color: #282828;
+    color: #FFFFFF;
+}
+.filter-select__modal > .active {
+    padding: 10px 18px;
+    color: @orange-color;
+    background: rgba(254, 95, 30, 0.05);
+    cursor: pointer;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
 }
 .list{
   padding: 20px 0px;
