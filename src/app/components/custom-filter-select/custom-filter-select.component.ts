@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
+import {ConfigService} from "../../service/config.service";
 
 @Component({
   selector: 'app-custom-filter-select',
@@ -12,9 +13,10 @@ export class CustomFilterSelectComponent implements OnInit {
   rotate: number = 0;
 
 
-  constructor() { }
+  constructor(private config: ConfigService) { }
 
   ngOnInit(): void {
+    this.config.sortValue$.next('popular');
   }
 
   openList(){
@@ -31,13 +33,14 @@ export class CustomFilterSelectComponent implements OnInit {
       case 'popular':
         this.activeType = 'популярности';
         break;
-      case 'prise':
+      case 'price':
         this.activeType = 'цене';
         break;
       case 'alphabet':
         this.activeType = 'алфавиту';
         break;
     }
+    this.config.sortValue$.next(value);
   }
 
 }
