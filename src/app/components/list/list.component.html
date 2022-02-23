@@ -134,7 +134,7 @@
   <ng-container *ngIf="pizzaArray">
     <ng-container *ngFor="let pizza of pizzaArray">
       <div class="list-card"  *ngIf="pizza.display">
-        <div class="list-card__img">
+        <div class="list-card__img" (click)="openModal(pizza)">
           <div class="list-card__img-tag">
             <ng-container [ngSwitch]="pizza.tag">
              <img src="assets/icon/sharpness.png" *ngSwitchCase="'sharpness'">

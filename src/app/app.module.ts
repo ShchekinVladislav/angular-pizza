@@ -12,6 +12,7 @@ import { BasketComponent } from './page/basket/basket.component';
 import { ListBasketComponent } from './components/list-basket/list-basket.component';
 import { CustomFilterSelectComponent } from './components/custom-filter-select/custom-filter-select.component';
 import { ModalFilterSelectComponent } from './components/custom-filter-select/modal-filter-select/modal-filter-select.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { ModalFilterSelectComponent } from './components/custom-filter-select/mo
     ListBasketComponent,
     CustomFilterSelectComponent,
     ModalFilterSelectComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

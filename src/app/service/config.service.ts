@@ -14,6 +14,7 @@ export class ConfigService {
   sortValue$: BehaviorSubject<any> = new BehaviorSubject(undefined);
   basketValue$: BehaviorSubject<any> = new BehaviorSubject({cost: 0, quantity: 0});
   filterValue$: BehaviorSubject<any> = new BehaviorSubject(undefined);
+  modalValue$: BehaviorSubject<any> = new BehaviorSubject(undefined);
 
   constructor(private http: HttpClient) {
   }

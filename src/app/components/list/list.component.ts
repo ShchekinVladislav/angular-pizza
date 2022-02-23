@@ -131,6 +131,9 @@ export class ListComponent implements OnInit, OnDestroy {
   addPizza(pizza: Pizza){
     this.config.parsePizza(pizza);
   }
+  openModal(pizza: Pizza){
+    this.config.modalValue$.next(pizza);
+  }
   ngOnDestroy() {
     this.subscriptions.forEach((sub) => sub.unsubscribe());
   }
